@@ -2,7 +2,7 @@
     "name": "editorzoom",
     "displayName": "Editor Zoom",
     "description": "Zooms the editor font instead of the entire workspace",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "publisher": "zolocode",
     "homepage": "zolo.io",
     "license": "MIT",

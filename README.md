@@ -12,6 +12,6 @@ Go to github.com/zolo/editorzoom to contribute patches and report issues.
 
 Suggestions:
 
-* Make the font size change configurable (currently +/- 2 points)
+* Make the font size change configurable (currently +/- 1)
 
 * Test on Windows/Linux, make necessary fixes (keymappings)

@@ -8,16 +8,16 @@ import * as vscode from 'vscode';
  */
 export function activate(context: vscode.ExtensionContext) {
 
-    vscode.window.showInformationMessage('Editor Zoom activated');
+    console.log('Editor Zoom activated');
 
     let disposableIn = vscode.commands.registerCommand('extension.editorZoomIn', () => {        
         let fontSize: number = vscode.workspace.getConfiguration('').get('editor.fontSize');
-        vscode.workspace.getConfiguration('').update('editor.fontSize', fontSize + 2, true)
+        vscode.workspace.getConfiguration('').update('editor.fontSize', fontSize + 1, true)
     });
 
     let disposableOut = vscode.commands.registerCommand('extension.editorZoomOut', () => {
         let fontSize: number = vscode.workspace.getConfiguration('').get('editor.fontSize');
-        vscode.workspace.getConfiguration('').update('editor.fontSize', fontSize - 2, true)
+        vscode.workspace.getConfiguration('').update('editor.fontSize', fontSize > 4 ? fontSize - 1 : fontSize, true)
     });
 
     context.subscriptions.push(disposableIn);
@@ -25,5 +25,5 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-    vscode.window.showInformationMessage('Editor Zoom extension deactivated');
+    console.log('Editor Zoom deactivated');
 }
